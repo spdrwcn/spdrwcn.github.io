@@ -55,7 +55,7 @@
 
 ## 产品展示：
 
-![DDR4-SODIMM-RW](/img/ddr4-sodimm.png)
-![DDR5-UDIMM-RW](/img/DDR5-UDIMM-RW.jpg)
-![DDR5-SODIMM-RW](/img/ddr5-sodimm.png)
-![DDR5-SODIMM-RW](/img/ddr5-sodimm-rw.png)
+![DDR4-SODIMM-RW](docs/img/ddr4-sodimm.png)
+![DDR5-UDIMM-RW](docs/img/DDR5-UDIMM-RW.jpg)
+![DDR5-SODIMM-RW](docs/img/ddr5-sodimm.png)
+![DDR5-SODIMM-RW](docs/img/ddr5-sodimm-rw.png)
