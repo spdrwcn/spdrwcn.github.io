@@ -1,24 +1,13 @@
 {
-    "author": "HuanCheng Bai <xiqingongzi@gmail.com>",
-    "description": "This is a sample book for gitbook-action-template",
-    "extension": null,
-    "generator": "site",
-    "isbn": "",
-    "output": null,
-    "pdf": {
-        "fontSize": 12,
-        "footerTemplate": null,
-        "headerTemplate": null,
-        "margin": {
-            "bottom": 36,
-            "left": 62,
-            "right": 62,
-            "top": 36
-        },
-        "pageNumbers": false,
-        "paperSize": "a4"
-    },
-    "plugins": [],
     "title": "SPDRW",
-    "variables": {}
+    "description": "gitbook-plugin-icp example",
+    "plugins": [
+        "icp"
+    ],
+    "pluginsConfig": {
+        "icp": {
+            "label": "&copy 2023-2024 www.spdrw.cn 版权所有 ICP证: <a href='https://beian.miit.gov.cn/' target='_blank'>鄂ICP备2024035370号-1</a>",
+            "number": ""
+        }
+    }
 }
