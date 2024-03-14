@@ -52,9 +52,3 @@
  - QQ群：667239537 （加群备注网站网址）
  - WX: hu1032529794
  
-
-## 产品展示：
-
-![DDR-UDIMM-RW](docs/img/DDR-UDIMM-RW.jpg)
-![DDR5-UDIMM-RW](docs/img/ddr5-UDIMM-RW.png)
-![DDR5-SODIMM-RW](docs/img/ddr5-sodimm-rw.png)
