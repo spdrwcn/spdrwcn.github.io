@@ -1,10 +1,8 @@
 # Summary
 
 - [介绍](README.md)
-  - [DDR4-UDIMM-RW](docs/DDR4-UDIMM-RW.md)
-  - [DDR4-SODIMM-RW](docs/DDR4-SODIMM-RW.md)
-  - [DDR5-UDIMM-RW](docs/DDR5-UDIMM-RW.md)
-  - [DDR5-SODIMM-RW](docs/DDR5-SODIMM-RW.md)
+  - [DDR-RW](docs/DDR-RW.md)
+  - [DDR5-RW](docs/DDR5-RW.md)
   
 - [软件功能指南](docs/app.md)
   - [Arduino烧录固件](docs/arduinofw.md)
