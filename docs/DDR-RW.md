@@ -4,4 +4,3 @@
 
 ![DDR-RW](img/DDR-HX.jpg)
 ![DDR-UDIMM-RW](img/DDR-DIMM.jpg)
-![DDR-UDIMM-DC-RW](img/DDR-HX-DC.jpg)
