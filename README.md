@@ -1,7 +1,6 @@
 # SPDRW
 
-根据开源项目 https://github.com/1a2m3/SPD-Reader-Writer 做的配套硬件；利用Arduino对I2C总线进行读写。
-
+根据开源项目 https://github.com/1a2m3/SPD-Reader-Writer 做的配套硬件；利用Arduino对I2C总线进行读写，一块主控板搭配不同的DIMM支持所有的DDR内存。
 
 ## 内存支持：
 
@@ -22,8 +21,7 @@
 
 | 型号 | 价格 | 货源状态 | 发货时间 |概述 |
 | :----:| :----: | :----: | :----: | :----: |
-| DDR-RW | 199CNY | 现货 | T+1 | 适用于DDR-DDR4 |
-| DDR5 | 199CNY | 现货 | 一周 | 适用于DDR5 |
+| DDR-RW | 249CNY | 现货 | 一周 | 适用于DDR-DDR5 |
 
 ## 台式机DIMM板
 
@@ -35,6 +33,18 @@
 | DDR4-DIMM | 50CNY | 现货 | 一周 | 适用于DDR4内存 |
 | DDR5-UDIMM |50CNY | 现货 | 一周 | 适用于DDR5 UDIMM内存 |
 | DDR5-RDIMM |50CNY | 现货 | 一周 | 适用于DDR5 RDIMM内存 |
+
+## 笔记本DIMM板
+
+| 型号 | 价格 | 货源状态 | 发货时间 |概述 |
+| :----:| :----: | :----: | :----: | :----: |
+| DDR-SODIMM | 50CNY | 现货 | 一周 | 适用于笔记本DDR内存 |
+| DDR2-SODIMM | 50CNY | 现货 | 一周 | 适用于笔记本DDR2内存 |
+| DDR3-SODIMM | 50CNY | 现货 | 一周 | 适用于笔记本DDR3内存 |
+| DDR4-SODIMM | 50CNY | 现货 | 一周 | 适用于笔记本DDR4内存 |
+| DDR5-SOUDIMM |50CNY | 现货 | 一周 | 适用于笔记本DDR5 SOUDIMM内存 |
+
+
 
 ## 批量采购
 
