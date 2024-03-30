@@ -2,7 +2,6 @@
 
 - [介绍](README.md)
   - [DDR-RW](docs/DDR-RW.md)
-  - [DDR5-RW](docs/DDR5-RW.md)
   
 - [软件功能指南](docs/app.md)
   - [Arduino烧录固件](docs/arduinofw.md)
