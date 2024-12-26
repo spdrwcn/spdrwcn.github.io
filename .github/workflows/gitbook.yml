@@ -2,7 +2,7 @@ name: 'Gitbook Deploy Action'
 on:
   push:
     branches:
-      - main  # trigger branch
+      - master  # trigger branch
 jobs:
   build:
     runs-on: ubuntu-latest
