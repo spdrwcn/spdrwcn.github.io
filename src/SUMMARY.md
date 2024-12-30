@@ -13,4 +13,3 @@
 - [编辑SPD数据指南](docs/edit.md)
   - [DDR4XMPEditor](docs/DDR4XMPEditor.md)
   - [DDR5XMPEditor](docs/DDR5XMPEditor.md)
-
