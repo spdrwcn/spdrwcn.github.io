@@ -2,6 +2,12 @@
 
  - 根据开源项目 https://github.com/1a2m3/SPD-Reader-Writer 做的配套硬件；利用Arduino对I2C总线进行读写，一块主控板搭配不同的DIMM支持所有的DDR内存。
 
+# 功能
+
+ - 支持所有DDR内存；
+ - 支持解除写保护；
+ - 支持导出导入SPD bin文件；
+
 ## 现货 
 
  - 2025-1-3更新 
