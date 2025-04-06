@@ -55,10 +55,11 @@
         <!-- Custom theme stylesheets -->
 
 
-        <!-- Provide site root to javascript -->
+        <!-- Provide site root and default themes to javascript -->
         <script>
-            var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc.js"></script>
@@ -68,8 +69,8 @@
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
 
                 if (theme.startsWith('"') && theme.endsWith('"')) {
                     localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
@@ -83,7 +84,8 @@
 
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script>
-            var theme;
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             const html = document.documentElement;
@@ -96,8 +98,8 @@
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var sidebar = null;
-            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
@@ -133,6 +135,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
@@ -188,28 +191,37 @@
 </ul>
 <h2 id="标准现货"><a class="header" href="#标准现货">标准现货</a></h2>
 <ul>
-<li>2025-2-21更新</li>
+<li>2025-04-06更新</li>
 <li>发货时间T+1</li>
 </ul>
 <div class="table-wrapper"><table><thead><tr><th>类型</th><th>价格(元)</th><th>单位</th><th>库存</th></tr></thead><tbody>
 <tr><td>主控板</td><td>349</td><td>1PCS</td><td>26</td></tr>
 <tr><td>DIMM-D3-D4</td><td>50</td><td>1PCS</td><td>2</td></tr>
-<tr><td>DIMM-D5</td><td>100</td><td>1PCS</td><td>预定</td></tr>
+<tr><td>DIMM-D5</td><td>100</td><td>1PCS</td><td>15</td></tr>
+</tbody></table>
+</div>
+<h1 id="自研硬件烧录器ddr5"><a class="header" href="#自研硬件烧录器ddr5">自研硬件烧录器(DDR5)</a></h1>
+<ul>
+<li>自研主控固件，可持续更新，支持通过浏览器更新(切换)固件。</li>
+<li>支持UDIMM RDIMM内存，可通过转接卡支持笔记本内存。</li>
+<li>后续可通过扩展板支持DDR4内存</li>
+</ul>
+<h2 id="标准现货-1"><a class="header" href="#标准现货-1">标准现货</a></h2>
+<ul>
+<li>2025-04-06更新</li>
+<li>发货时间T+1</li>
+<li>自备TYPE-C数据线</li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th>类型</th><th>价格(元)</th><th>单位</th><th>库存</th></tr></thead><tbody>
+<tr><td>主控板</td><td>150</td><td>1PCS</td><td>30</td></tr>
+<tr><td>UDIMM</td><td>100</td><td>1PCS</td><td>10</td></tr>
+<tr><td>RDIMM</td><td>100</td><td>1PCS</td><td>10</td></tr>
 </tbody></table>
 </div>
 <h2 id="硬件定制开发"><a class="header" href="#硬件定制开发">硬件定制开发</a></h2>
 <ul>
 <li>DDR4 支持 8DIMM 读写，带写保护仅支持 4DIMM.</li>
 <li>DDR5 支持 8DIMM 读写及写保护。</li>
-</ul>
-<h2 id="软件开发"><a class="header" href="#软件开发">软件开发</a></h2>
-<ul>
-<li>支持各字节指定修改。</li>
-<li>扫描枪输入修改指定字节</li>
-<li>批量修改。</li>
-<li>一键清除指定字节</li>
-<li>一键解除所有DIMM写保护</li>
-<li>一键烧录所有DIMM</li>
 </ul>
 <h2 id="联系"><a class="header" href="#联系">联系：</a></h2>
 <ul>
