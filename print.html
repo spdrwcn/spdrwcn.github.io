@@ -227,21 +227,21 @@
 </tbody></table>
 </div>
 <h3 id="1-读取"><a class="header" href="#1-读取">1. 读取</a></h3>
-<p>向指定的字节地址读取数据。</p>
+<p>向指定的字节地址读取数据，起始地址<code>0x00</code>，则从<code>0x00</code>开始读取三个字节。</p>
 <p><strong>请求示例:</strong></p>
 <pre><code>{
   "type": "ddr5",
   "cmd": "read",
   "addr": "0x00",
   "value": "",
-  "number": ""
+  "number": "3"  
 }
 </code></pre>
 <p><strong>响应示例:</strong></p>
 <pre><code>AB12CD
 </code></pre>
 <h3 id="2-写入"><a class="header" href="#2-写入">2. 写入</a></h3>
-<p>向指定的字节地址写入数据。</p>
+<p>向指定的字节地址写入数据，起始地址<code>0x00</code>，写入值<code>AB12CD</code>，则从<code>0x00</code>开始写入三个字节。</p>
 <p><strong>请求示例:</strong></p>
 <pre><code>{
   "type": "ddr5",
