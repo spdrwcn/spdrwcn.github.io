@@ -1,8 +1,8 @@
 # Summary
 
 - [DDRRW-PRO](README.md)
-  - [PRO-API](docs/pro/api.md)
-- [开源版本介绍](ky.md)
+  - [PRO-API](docs/api.md)
+- [开源版本介绍](docs/ky.md)
   - [DDR-RW](docs/DDR-RW.md)
   
 - [软件功能指南](docs/app.md)
