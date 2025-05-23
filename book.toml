@@ -4,5 +4,3 @@ language = "zh"
 multilingual = false
 src = "src"
 title = "spdrw"
-[output.html]
-cname = "www.spdrw.cn"
