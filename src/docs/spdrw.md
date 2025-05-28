@@ -2,6 +2,9 @@
 
  - 本工具支持通过串口与设备通信，进行 DDR SPD 数据的 读取、写入、写保护设置/解除 等操作，同时也支持 WiFi 配置。
 
+ - 仓库地址：https://github.com/spdrwcn/spdrw
+ - 下载地址：https://github.com/spdrwcn/spdrw/releases
+
 ## 使用方式
 ```
 spdrw.exe [子命令] [选项]
