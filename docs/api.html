@@ -199,15 +199,33 @@
 <li>写入（write）</li>
 <li>写保护（srswp, crswp）</li>
 </ul>
-<h2 id="字段说明"><a class="header" href="#字段说明">字段说明</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>字段名</th><th>字段类型</th><th>适用操作</th><th>字段说明</th></tr></thead><tbody>
-<tr><td>type</td><td>string</td><td>所有操作</td><td>DDR内存类型，可选值：<code>ddr4</code>、<code>ddr5</code></td></tr>
-<tr><td>cmd</td><td>string</td><td>所有操作</td><td>操作类型，可选值：<code>read</code>、<code>write</code>、<code>srswp</code>、<code>crswp</code></td></tr>
-<tr><td>addr</td><td>string</td><td><code>read</code> <code>write</code></td><td>操作的字节地址，以十六进制表示（如 <code>"00"</code>）</td></tr>
-<tr><td>value</td><td>string</td><td><code>write</code> <code>srswp</code></td><td>要写入的数据，以十六进制字符串表示，多个字节可连续拼接（如 <code>"AB12CD"</code>）</td></tr>
-<tr><td>number</td><td>string</td><td><code>read</code></td><td>要读取的字节数量，若为空则默认为 <code>1</code></td></tr>
+<h2 id="参数说明"><a class="header" href="#参数说明">参数说明</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>参数名</th><th>参数说明</th></tr></thead><tbody>
+<tr><td>type</td><td>DDR内存类型，可选值：<code>ddr3</code>、<code>ddr4</code>、<code>ddr5</code></td></tr>
+<tr><td>cmd</td><td>操作类型，可选值：<code>read</code>、<code>write</code>、<code>srswp</code>、<code>crswp</code></td></tr>
+<tr><td>addr</td><td>操作的字节地址，以十六进制表示（如 <code>"00"</code>）</td></tr>
+<tr><td>value</td><td>要写入的数据，以十六进制字符串表示，多个字节可连续拼接（如 <code>"AB12CD"</code>）</td></tr>
+<tr><td>number</td><td>要读取的字节数量，若为空则默认为 <code>1</code></td></tr>
 </tbody></table>
 </div>
+<h2 id="参数详情"><a class="header" href="#参数详情">参数详情</a></h2>
+<ul>
+<li><code>read</code> 读取操作，与 <code>number</code> 参数一起使用。</li>
+<li><code>write</code> 写入操作，与 <code>value</code> 参数一起使用。</li>
+<li><code>srswp</code> 设置写保护，与 <code>value</code> 参数一起使用。</li>
+<li><code>crswp</code> 解除写保护，不带参数。</li>
+</ul>
+<h2 id="操作类型cmd-支持详情"><a class="header" href="#操作类型cmd-支持详情">操作类型(cmd) 支持详情</a></h2>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">内存类型</th><th style="text-align: center"><code>read</code></th><th style="text-align: center"><code>write</code></th><th style="text-align: center"><code>srswp</code></th><th style="text-align: center"><code>crswp</code></th></tr></thead><tbody>
+<tr><td style="text-align: center">ddr3</td><td style="text-align: center">✅</td><td style="text-align: center">✅</td><td style="text-align: center">❌</td><td style="text-align: center">✅</td></tr>
+<tr><td style="text-align: center">ddr4</td><td style="text-align: center">✅</td><td style="text-align: center">✅</td><td style="text-align: center">✅</td><td style="text-align: center">✅</td></tr>
+<tr><td style="text-align: center">ddr5</td><td style="text-align: center">✅</td><td style="text-align: center">✅</td><td style="text-align: center">✅</td><td style="text-align: center">❌</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li><code>ddr3</code> 不支持<code>srswp</code>设置写保护</li>
+<li><code>ddr5</code> <code>crswp</code>操作由<code>srswp</code>设置<code>value</code>为<code>0000</code>代替</li>
+</ul>
 <h3 id="1-读取"><a class="header" href="#1-读取">1. 读取</a></h3>
 <p>向指定的字节地址读取数据，起始地址<code>00</code>，则从<code>00</code>开始读取三个字节。</p>
 <p><strong>请求示例:</strong></p>
@@ -241,20 +259,26 @@
 </code></pre>
 <h3 id="3-设置写保护"><a class="header" href="#3-设置写保护">3. 设置写保护</a></h3>
 <p><strong>DDR5请求示例:</strong></p>
+<ul>
+<li>设置写保护（<code>value</code>由两组二位16进制值，转换为二进制对应Block位<code>15 ~ 0</code>，<code>1</code>为开启，<code>0</code>为关闭</li>
+</ul>
 <pre><code>{
   "type": "ddr5",
   "cmd": "srswp",
   "addr": "",
-  "value": "2233",  //设置写保护（两组二位16进制值，转换为二进制对应Block位`15 ~ 0`
+  "value": "2233",
   "number": ""
 }
 </code></pre>
 <p><strong>DDR4请求示例:</strong></p>
+<ul>
+<li>设置写保护（<code>value</code>由二位16进制值取低四位，转换为二进制对应Block位<code>3 ~ 0</code>，<code>1</code>为开启，<code>0</code>为关闭</li>
+</ul>
 <pre><code>{
   "type": "ddr4",
   "cmd": "srswp",
   "addr": "",
-  "value": "0F",  //设置写保护（二位16进制值，转换为二进制对应Block位`3 ~ 0`
+  "value": "0F",
   "number": ""
 }
 </code></pre>
