@@ -5,6 +5,7 @@
 ## 实物图片
 
 ![实物图片](docs/img/spdrw.png)
+![实物图片](docs/img/lpcamm2.jpg)
 ![实物图片](docs/img/ddr5.jpg)
 ![实物图片](docs/img/ddr34.jpg)
 
