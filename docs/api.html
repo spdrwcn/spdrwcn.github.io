@@ -201,6 +201,7 @@
 </ul>
 <h2 id="参数说明"><a class="header" href="#参数说明">参数说明</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>参数名</th><th>参数说明</th></tr></thead><tbody>
+<tr><td>spdaddr</td><td>设备地址范围：50-57</td></tr>
 <tr><td>type</td><td>DDR内存类型，可选值：<code>ddr3</code>、<code>ddr4</code>、<code>ddr5</code></td></tr>
 <tr><td>cmd</td><td>操作类型，可选值：<code>read</code>、<code>write</code>、<code>srswp</code>、<code>crswp</code></td></tr>
 <tr><td>addr</td><td>操作的字节地址，以十六进制表示（如 <code>"00"</code>）</td></tr>
@@ -230,6 +231,7 @@
 <p>向指定的字节地址读取数据，起始地址<code>00</code>，则从<code>00</code>开始读取三个字节。</p>
 <p><strong>请求示例:</strong></p>
 <pre><code>{
+  "spdaddr": "50",
   "type": "ddr5",
   "cmd": "read",
   "addr": "00",
@@ -244,6 +246,7 @@
 <p>向指定的字节地址写入数据，起始地址<code>00</code>，写入值<code>AB12CD</code>，则从<code>00</code>开始写入三个字节。</p>
 <p><strong>请求示例:</strong></p>
 <pre><code>{
+  "spdaddr": "50",
   "type": "ddr5",
   "cmd": "write",
   "addr": "00",
@@ -263,6 +266,7 @@
 <li>设置写保护（<code>value</code>由两组二位16进制值，转换为二进制对应Block位<code>15 ~ 0</code>，<code>1</code>为开启，<code>0</code>为关闭</li>
 </ul>
 <pre><code>{
+  "spdaddr": "50",
   "type": "ddr5",
   "cmd": "srswp",
   "addr": "",
@@ -275,6 +279,7 @@
 <li>设置写保护（<code>value</code>由二位16进制值取低四位，转换为二进制对应Block位<code>3 ~ 0</code>，<code>1</code>为开启，<code>0</code>为关闭</li>
 </ul>
 <pre><code>{
+  "spdaddr": "50",
   "type": "ddr4",
   "cmd": "srswp",
   "addr": "",
@@ -291,6 +296,7 @@
 </ul>
 <p><strong>请求示例:</strong></p>
 <pre><code>{
+  "spdaddr": "50",
   "type": "ddr5",
   "cmd": "crswp",
   "addr": "",
