@@ -12,6 +12,7 @@
 
 | 参数名  | 参数说明 |
 |----|----|
+| spdaddr | 设备地址范围：50-57 |
 | type    |DDR内存类型，可选值：`ddr3`、`ddr4`、`ddr5` |
 | cmd     | 操作类型，可选值：`read`、`write`、`srswp`、`crswp` |
 | addr    | 操作的字节地址，以十六进制表示（如 `"00"`）    |
@@ -43,6 +44,7 @@
 **请求示例:**
 ```
 {
+  "spdaddr": "50",
   "type": "ddr5",
   "cmd": "read",
   "addr": "00",
@@ -62,6 +64,7 @@ AB12CD
 **请求示例:**
 ```
 {
+  "spdaddr": "50",
   "type": "ddr5",
   "cmd": "write",
   "addr": "00",
@@ -84,6 +87,7 @@ AB12CD
 
 ```
 {
+  "spdaddr": "50",
   "type": "ddr5",
   "cmd": "srswp",
   "addr": "",
@@ -97,6 +101,7 @@ AB12CD
  
 ```
 {
+  "spdaddr": "50",
   "type": "ddr4",
   "cmd": "srswp",
   "addr": "",
@@ -117,6 +122,7 @@ OK
 **请求示例:**
 ```
 {
+  "spdaddr": "50",
   "type": "ddr5",
   "cmd": "crswp",
   "addr": "",
