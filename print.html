@@ -342,50 +342,12 @@
   "number": ""
 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ddr-spd-读写工具-使用文档"><a class="header" href="#ddr-spd-读写工具-使用文档">DDR-SPD 读写工具 使用文档</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ddr-spd-web读写工具-使用文档"><a class="header" href="#ddr-spd-web读写工具-使用文档">DDR-SPD WEB读写工具 使用文档</a></h1>
 <ul>
-<li>
-<p>本工具支持通过串口与设备通信，进行 DDR SPD 数据的 读取、写入、写保护设置/解除 等操作，同时也支持 WiFi 配置。</p>
-</li>
-<li>
-<p>仓库地址：https://github.com/spdrwcn/spdrw</p>
-</li>
-<li>
-<p>下载地址：https://github.com/spdrwcn/spdrw/releases</p>
-</li>
+<li>本工具支持通过串口与设备通信，进行 DDR SPD 数据的 读取、写入、写保护设置。</li>
+<li>在线工具 <a href="https://spdrw.cc/">https://spdrw.cc/</a></li>
+<li>仓库地址：https://github.com/spdrw/spdrw.github.io</li>
 </ul>
-<h2 id="使用方式"><a class="header" href="#使用方式">使用方式</a></h2>
-<pre><code>spdrw.exe [子命令] [选项]
-</code></pre>
-<p>备注：选项均支持短选项，例如  <code>-p</code> 等同于 <code>--port-name</code>，wifi 密码短选项为<code>-w</code>.</p>
-<h3 id="子命令"><a class="header" href="#子命令">子命令</a></h3>
-<h4 id="list-列出可用端口串口"><a class="header" href="#list-列出可用端口串口">list 列出可用端口/串口</a></h4>
-<pre><code>spdrw.exe list
-</code></pre>
-<h4 id="wifi-配置wifi连接"><a class="header" href="#wifi-配置wifi连接">wifi 配置WiFi连接</a></h4>
-<pre><code>spdrw.exe wifi --port-name COM1 --ssid "WiFi名称" --password "密码"
-</code></pre>
-<h4 id="send-spd数据操作"><a class="header" href="#send-spd数据操作">send SPD数据操作</a></h4>
-<ul>
-<li>读取SPD数据</li>
-</ul>
-<pre><code>spdrw.exe send --port-name COM1 --ddr-type ddr5 --cmd read --addr 00 -n 512
-</code></pre>
-<ul>
-<li>写入SPD数据</li>
-</ul>
-<pre><code>spdrw.exe send --port-name COM1 --ddr-type ddr5 --cmd write --addr 00 --value AA
-</code></pre>
-<ul>
-<li>设置SPD数据写保护</li>
-</ul>
-<pre><code>spdrw.exe send --port-name COM1 --ddr-type ddr5 --cmd srswp --value AABB
-</code></pre>
-<ul>
-<li>解除SPD数据写保护</li>
-</ul>
-<pre><code>spdrw.exe send --port-name COM1 --ddr-type ddr5 --cmd crswp
-</code></pre>
 
                     </main>
 
