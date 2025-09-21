@@ -5,8 +5,11 @@
  
 ## 离线工具 
 
-### V1.0.0
+### Windows V1.0.5
 
- - [https://spdrw.cc/v1/1.0.0/spdrw_1.0.0_x64-setup.exe](https://spdrw.cc/v1/1.0.0/spdrw_1.0.0_x64-setup.exe)
+ - [https://spdrw.cc/v1/1.0.5/spdrw_1.0.5_x64-setup.exe](https://spdrw.cc/v1/1.0.5/spdrw_1.0.5_x64-setup.exe)
 
 
+### Android V1.0.0
+
+ - 开发中95%   
