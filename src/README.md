@@ -7,8 +7,8 @@
 
 ## 展示
 
-![主控板](img/spdrw.png)
-![DIMM板](img/dimm.png)
+![主控板](docs/img/spdrw.png)
+![DIMM板](docs/img/dimm.png)
 
 ## 价格 
 
