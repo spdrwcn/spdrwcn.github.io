@@ -7,3 +7,5 @@
  - [https://spdrw.cc/v1/1.0.6/spdrw_1.0.6_x64-setup.exe](https://spdrw.cc/v1/1.0.6/spdrw_1.0.6_x64-setup.exe)
 
 ## 串口驱动下载
+
+ - [https://spdrw.cc/Windows/CH341SER.ZIP](https://spdrw.cc/Windows/CH341SER.ZIP)
