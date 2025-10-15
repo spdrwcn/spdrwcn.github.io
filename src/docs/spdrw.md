@@ -1,6 +1,6 @@
 # 主控板 使用文档
  
-![主控板](docs/img/spdrw.png)
+![主控板](img/spdrw.png)
 
 
 ## RST 和 BOOT 按键
