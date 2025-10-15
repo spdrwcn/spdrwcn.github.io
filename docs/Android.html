@@ -201,60 +201,17 @@
                     <main>
                         <h1 id="android端读写工具-使用文档"><a class="header" href="#android端读写工具-使用文档">Android端读写工具 使用文档</a></h1>
 <ul>
-<li>安卓端需安装两个APK，<code>spdrw.apk</code>和<code>UsbSerialWebSocketServer.apk</code></li>
+<li>安卓端通过通过<code>WIFI</code>连接主控板<code>AP</code>，然后通过<code>websocket</code>通讯，使用默认服务地址即可。</li>
 </ul>
-<h2 id="下载链接"><a class="header" href="#下载链接">下载链接</a></h2>
+<h2 id="客户端下载"><a class="header" href="#客户端下载">客户端下载</a></h2>
 <ul>
-<li><a href="https://spdrw.cc/Android/spdrw.apk">https://spdrw.cc/Android/spdrw.apk</a></li>
-<li><a href="https://spdrw.cc/Android/UsbSerialWebSocketServer.apk">https://spdrw.cc/Android/UsbSerialWebSocketServer.apk</a></li>
+<li><a href="https://spdrw.cc/Android/spdrw_1.0.0.apk">https://spdrw.cc/Android/spdrw_1.0.0.apk</a></li>
 </ul>
-<h2 id="usbserialwebsocketserverapk-使用文档"><a class="header" href="#usbserialwebsocketserverapk-使用文档">UsbSerialWebSocketServer.apk 使用文档</a></h2>
-<p>将USB串口转换器绑定到WebSocket服务端，基于 <a href="https://github.com/ClusterM/usb-serial-telnet-server">usb-serial-telnet-server</a> 修改而来。</p>
-<p>只需将USB串口适配器连接到Android设备的USB OTG端口，启动此应用程序，然后使用任何WebSocket客户端连接到它，例如：</p>
+<h2 id="使用文档"><a class="header" href="#使用文档">使用文档</a></h2>
 <ul>
-<li>使用同一Android设备上的浏览器（连接到localhost）</li>
-<li>使用同一网络上的计算机上的WebSocket客户端（通过Wi-Fi连接）</li>
-<li>使用任何支持WebSocket的客户端应用程序</li>
-</ul>
-<h3 id="主要特点"><a class="header" href="#主要特点">主要特点</a></h3>
-<p>✅ <strong>纯文本发送</strong>：客户端发送的文本直接转发到串口<br />
-✅ <strong>纯文本接收</strong>：串口接收的数据直接作为文本发送给客户端<br />
-✅ <strong>无格式转换</strong>：不进行十六进制、Blob等复杂转换<br />
-✅ <strong>简单易用</strong>：就像普通的聊天工具一样简单<br />
-✅ <strong>跨平台兼容</strong>：任何支持WebSocket的客户端都可以使用</p>
-<h3 id="兼容设备"><a class="header" href="#兼容设备">兼容设备</a></h3>
-<p>此应用程序使用 <a href="https://github.com/mik3y/usb-serial-for-android">mik3y的usb-serial-for-android库</a> 并支持USB转串口转换器芯片：</p>
-<ul>
-<li>FTDI FT232R, FT232H, FT2232H, FT4232H, FT230X, FT231X, FT234XD</li>
-<li>Prolific PL2303</li>
-<li>Silabs CP2102 和所有其他 CP210x</li>
-<li>Qinheng CH340, CH341A, CH340K, CH340X</li>
-</ul>
-<p>一些其他设备特定驱动程序：</p>
-<ul>
-<li>GsmModem 设备，例如基于Unisoc的Fibocom GSM调制解调器</li>
-<li>Chrome OS CCD（闭壳调试）</li>
-</ul>
-<p>以及实现通用CDC/ACM协议的设备，如：</p>
-<ul>
-<li>Qinheng CH9102</li>
-<li>Microchip MCP2221</li>
-<li>使用ATmega32U4的Arduino</li>
-<li>使用V-USB软件USB的Digispark</li>
-<li>...</li>
-</ul>
-<h3 id="使用方法"><a class="header" href="#使用方法">使用方法</a></h3>
-<ul>
-<li>安装并启动UsbSerialWebSocketServer应用</li>
-<li>连接USB串口设备</li>
-<li>按需是否开启本地连接(Local connections only)</li>
-<li>记录显示的WebSocket地址（如：<code>ws://192.168.1.100:8080</code> 或 <code>ws://127.0.0.1:8080</code>）</li>
-</ul>
-<h2 id="spdrwapk-使用文档"><a class="header" href="#spdrwapk-使用文档">spdrw.apk 使用文档</a></h2>
-<ul>
-<li>安装并启动spdrw应用</li>
+<li>安装并启动<code>SPDRW</code>应用</li>
 <li>点击顶部的<code>连接</code></li>
-<li>输入WebSocket地址（如：<code>ws://192.168.1.100:8080</code> 或 <code>ws://127.0.0.1:8080</code>）</li>
+<li>输入WebSocket地址（主控板AP模式默认地址 <code>ws://192.168.5.1</code>）</li>
 <li>点击弹窗中的<code>连接</code></li>
 </ul>
 
