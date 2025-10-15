@@ -370,6 +370,22 @@
   "number": ""
 }
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="主控板-使用文档"><a class="header" href="#主控板-使用文档">主控板 使用文档</a></h1>
+<p><img src="docs/docs/img/spdrw.png" alt="主控板" /></p>
+<h2 id="rst-和-boot-按键"><a class="header" href="#rst-和-boot-按键">RST 和 BOOT 按键</a></h2>
+<ul>
+<li>RST：主控复位按键，按下松开主控复位，恢复初始状态</li>
+<li>BOOT：功能键，连按两次启动AP模式，<code>WIFI</code>名称<code>SPDRW-WS</code>密码<code>123456789</code>。</li>
+<li>启动AP模式时同步启动WS服务端，可通过WS客户端(例如安卓端)连接<code>WS://192.168.5.1</code>。</li>
+</ul>
+<h2 id="rgb指示灯"><a class="header" href="#rgb指示灯">RGB指示灯</a></h2>
+<ul>
+<li>根据操作结果显示不同颜色，例如<code>write</code>操作，写入失败会显示<code>红色</code>，写入成功显示<code>绿色</code>.</li>
+</ul>
+<h2 id="ap指示灯"><a class="header" href="#ap指示灯">AP指示灯</a></h2>
+<ul>
+<li>AP模式启动时常量</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="windows端读写工具"><a class="header" href="#windows端读写工具">Windows端读写工具</a></h1>
 <ul>
 <li>通过串口连接主控板，使用CH340X串口芯片，需安装串口驱动，一般情况会静默自动安装(5分钟左右)，如未自动安装，请下载串口驱动。</li>
