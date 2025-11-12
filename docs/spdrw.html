@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>主控板使用文档 - spdrw</title>
+        <title>使用文档 - spdrw</title>
 
 
         <!-- Custom HTML head -->
@@ -201,12 +201,6 @@
                     <main>
                         <h1 id="主控板使用文档"><a class="header" href="#主控板使用文档">主控板使用文档</a></h1>
 <p><img src="img/spdrw.png" alt="主控板" /></p>
-<h2 id="rst-和-boot-按键"><a class="header" href="#rst-和-boot-按键">RST 和 BOOT 按键</a></h2>
-<ul>
-<li><strong>RST</strong>：主控复位按键，按下松开主控复位，恢复初始状态。</li>
-<li><strong>BOOT</strong>：功能键，连按两次启动 AP 模式，<code>WIFI</code> 名称 <code>SPDRW-WS</code>，密码 <code>123456789</code>。</li>
-<li>启动 AP 模式时同步启动 WS 服务端，可通过 WS 客户端（例如安卓端）连接 <code>ws://192.168.5.1</code>。</li>
-</ul>
 <h2 id="rgb-指示灯"><a class="header" href="#rgb-指示灯">RGB 指示灯</a></h2>
 <ul>
 <li>根据操作结果显示不同颜色，例如 <code>write</code> 操作写入失败显示红色，写入成功显示绿色。</li>
@@ -214,6 +208,31 @@
 <h2 id="ap-指示灯"><a class="header" href="#ap-指示灯">AP 指示灯</a></h2>
 <ul>
 <li>AP 模式启动时常亮。</li>
+</ul>
+<h1 id="windows端读写工具"><a class="header" href="#windows端读写工具">Windows端读写工具</a></h1>
+<ul>
+<li>通过串口连接主控板，使用 CH340X 串口芯片，需安装串口驱动，一般情况会静默自动安装（约 5 分钟），如未自动安装，请下载串口驱动。</li>
+</ul>
+<h2 id="安装步骤"><a class="header" href="#安装步骤">安装步骤</a></h2>
+<ol>
+<li>下载并安装客户端，按提示完成向导。</li>
+<li>如设备未识别串口，手动安装驱动后重新插拔主控板。</li>
+</ol>
+<h2 id="客户端下载"><a class="header" href="#客户端下载">客户端下载</a></h2>
+<ul>
+<li><a href="https://www.spdrw.cn/download/windows/v1/1.0.1/SPDRW_1.0.1_x64-setup.exe">https://www.spdrw.cn/download/windows/v1/1.0.1/SPDRW_1.0.1_x64-setup.exe</a></li>
+</ul>
+<h2 id="串口驱动下载"><a class="header" href="#串口驱动下载">串口驱动下载</a></h2>
+<ul>
+<li><a href="https://www.spdrw.cn/download/windows/v1/CH341SER.ZIP">https://www.spdrw.cn/download/windows/v1/CH341SER.ZIP</a></li>
+</ul>
+<h1 id="android端读写工具-使用文档"><a class="header" href="#android端读写工具-使用文档">Android端读写工具 使用文档</a></h1>
+<ul>
+<li>安卓端通过TYPE-C插上设备会自动启动APP并自动连接设备。</li>
+</ul>
+<h2 id="客户端下载-1"><a class="header" href="#客户端下载-1">客户端下载</a></h2>
+<ul>
+<li><a href="https://www.spdrw.cn/download/android/spdrw_1.0.0.apk">https://www.spdrw.cn/download/android/spdrw_1.0.0.apk</a></li>
 </ul>
 
                     </main>
@@ -224,9 +243,6 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../docs/Windows.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -238,9 +254,6 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../docs/Windows.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
             </nav>
 
         </div>
